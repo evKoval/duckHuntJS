@@ -1,0 +1,269 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+    font-family: pixelFont;
+    src: url(pixelFont.ttf); 
+   }
+
+.screen{
+	width: 1280px;
+	height: 769px;
+	margin: 0 auto;
+	position: relative;
+	cursor: url('./aim.png') 16 16, crosshair;
+	font-family: pixelFont;
+}
+.introScreen{
+	background-color: black;
+	text-align: center;
+	padding-top: 200px;
+}
+
+h1{
+	color: #00d0db;	
+	font-size: 5em;
+}
+
+button{	
+	padding: 5px;
+	display: block;
+	margin: 50px auto 10px;
+	color: #ff9c35;
+	font-size: 2em;
+	font-family: pixelFont;
+	background-color: black;
+	border: 0px solid #000;
+	cursor: url('./aim.png') 16 16, crosshair;
+}
+p{
+	color: #46c74b;
+	opacity: 0;
+	transition: opacity 1s ease-out 0s;
+}
+.multiplayer:hover + p{
+	opacity: 100%;
+
+}
+
+.scores{
+	color: #46c74b;
+	font-size: 1.5em;
+	margin-top: 30px;
+	display: none;
+}
+
+.yourScore{
+	animation: blink 2s infinite ease-in-out 0s;
+}
+
+@keyframes blink{
+	0%{opacity: 100%}
+	50%{opacity: 0%}
+	100%{opacity: 100%}
+}
+.author{
+	position: absolute;
+	color: #46c74b;
+	bottom: 10px;
+	right: 10px;
+}
+.gameScreen{	
+	background-image: url(bg_full.png);
+	overflow: hidden;
+	display: none;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 90px;
+	width: 100%;
+	z-index: 20;	
+	user-select: none;
+}
+
+.statBox{
+	/*width: 500px;*/
+	height: 70px;
+	border: 4px solid #74a81a;
+	border-radius: 10px;
+	background-color: black;
+	color: #74a81a;
+	font-size: 25px;
+	font-family: pixelFont;
+}
+
+.bulletBox{
+	width: 100px;
+	text-align: center;
+	line-height: 70px;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+.bullet{
+	width: 30px;
+	height: 30px;
+	/*flex: 0;*/
+	/*display: inline-block;*/
+	background-image: url(gs.png);
+	background-position: -716px -755px;
+}
+.duckBox{
+	width: 600px;
+	padding-left: 10px;
+	text-align: left;
+	line-height: 70px;
+
+}
+.duckStat{
+	width: 45px;
+	height: 45px;
+	margin: 10px 2px;
+	background-image: url('duck icon.png');
+	background-size: cover;
+	border-radius: 50%;
+	float: right;
+}
+.clear{
+	clear:both;
+}
+
+.scoreBox{
+	width: 200px;	
+	padding-top: 5px;
+	text-align: center;	
+}
+
+.grass{
+	position: absolute;
+	bottom: 0;
+	z-index: 10; 
+	user-select: none;
+}
+.tree{
+	width: 213px;
+	height: 368px;
+	top: 205px;
+	left: 233px;
+	position: absolute;
+	background-image: url(gs.png);
+	background-position: -450px -412px;
+	transform: scale(-1,1);
+}
+
+.duck{
+	width: 90px;
+	height: 90px;
+
+	position: absolute;
+	display: none;
+	/*top:0px;
+	left: 0px;*/
+	background: url('GS resized.png');
+	background-position: -420px -490px;
+	/*transition: top 2s linear 0s,left 2s linear 0s;*/	
+}
+
+.isKilled{
+	/*animation: duckFall .4s infinite step-end .5s;*/
+	transition: left 1s ease-in .5s;
+}
+
+.dogCatch{
+	width: 114px;
+	height: 104px;
+	position: absolute;
+	top: 600px;
+	background-image: url('GS resized.png');
+	background-position: -828px 0px;
+}
+
+.dogRun{
+	width: 150px;
+	height: 130px;
+	position: absolute;
+	top: 550px;
+	left: 0;
+	background-image: url('GS resized.png');
+	background-position: 0px 0px;
+	transition: all 3s ease-in-out 0s;
+	animation: dogRun .5s 6 step-end 0s;
+	z-index: 20;
+}
+
+.dogLaugh{
+	width: 150px;
+	height: 130px;
+	position: absolute;
+	top: 600px;
+	left: calc(50% - 75px);
+	background-image: url('GS resized.png');
+	background-position: -450px -140px;
+	transition: all 1s cubic-bezier(0.26, 0.63, 0, 0.97) 0s;
+	animation: dogLaugh .5s 6 step-end 0s;
+}
+
+@keyframes dogRun{
+0%{background-position: 0 0;}
+25%{background-position: -150px 0;}
+50%{background-position: -300px 0;}
+75%{background-position: -450px 0;}
+100%{background-position: -600px 0;}
+}
+
+@keyframes dogJump{
+0%{display: none;
+	background-position: 0 -140px;}
+50%{background-position: -150px -140px;}
+75%{background-position: -300px -140px;}
+100%{display: none}
+}
+
+@keyframes duckFlyRight{
+	0% {background-position: -320px -300px;}
+	25%{background-position: -420px -300px;}
+	50%{background-position: -520px -300px;}
+	75%{background-position: -420px -300px;}
+}
+
+@keyframes duckFlyRightUp{
+	0% {background-position: -320px -390px;}
+	25%{background-position: -420px -390px;}
+	50%{background-position: -520px -390px;}
+	75%{background-position: -420px -390px;}
+}
+
+@keyframes duckFlyAway{
+	0% {background-position: -320px -490px;}
+	25%{background-position: -420px -490px;}
+	50%{background-position: -520px -490px;}
+	75%{background-position: -420px -490px;}
+}
+
+@keyframes duckFall{
+	0%{background-position: -420px -580px;}
+	50% {transform:scale(-1,1);}
+	100%{background-position: -420px -580px;}
+	
+}
+
+@keyframes dogCatch{
+	0% {top:560px;}
+	25% {top:460px;}
+	50% {top:500px;}
+	75% {top:460px;}
+	100% {top:560px;}
+}
+
+@keyframes dogLaugh{
+	0% {background-position: -450px -140px;}
+	50% {background-position: -600px -140px;}
+}

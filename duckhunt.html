@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>DuckHunt</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="introScreen screen">
+			<h1>DuckHunt.js</h1>
+			<button class="singleplayer">SinglePlayer</button>
+			<button class="multiplayer">MultiPlayer</button>
+			<p>Use &#8592;  &#8594; to control the duck</p>
+			<div class="yourScore scores">Your score = </div>
+			<div class="topScore scores">Topscore1000</div>
+			<div class="author">E.Koval 2019</div>
+		</div>
+		<div class="gameScreen screen">			
+			<div class="duck" id="duck"></div>
+			<div class="grass"><img src="bg.png" alt=""></div>
+			<div class="tree"></div>
+			<div class="dogRun"></div>
+			<div class="dogCatch"></div>
+			<div class="dogLaugh"></div>
+			<footer>
+				<div class="bulletBox statBox">
+					<div class="bullet"></div>
+					<div class="bullet"></div>
+					<div class="bullet"></div>
+				</div>
+				<div class="duckBox statBox">
+					HIT					
+				</div>
+				<div class="scoreBox statBox">Score:</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
