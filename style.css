@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: pixelFont;
-    src: url(pixelFont.ttf); 
+    src: url('./Assets/pixelFont.ttf'); 
    }
 
 .screen{
@@ -12,7 +12,7 @@
 	height: 769px;
 	margin: 0 auto;
 	position: relative;
-	cursor: url('./aim.png') 16 16, crosshair;
+	cursor: url('./Assets/aim.png') 16 16, crosshair;
 	font-family: pixelFont;
 }
 .introScreen{
@@ -35,7 +35,7 @@ button{
 	font-family: pixelFont;
 	background-color: black;
 	border: 0px solid #000;
-	cursor: url('./aim.png') 16 16, crosshair;
+	cursor: url('./Assets/aim.png') 16 16, crosshair;
 }
 p{
 	color: #46c74b;
@@ -70,7 +70,7 @@ p{
 	right: 10px;
 }
 .gameScreen{	
-	background-image: url(bg_full.png);
+	background-image: url('./Assets/bg_full.png');
 	overflow: hidden;
 	display: none;
 }
@@ -88,7 +88,6 @@ footer{
 }
 
 .statBox{
-	/*width: 500px;*/
 	height: 70px;
 	border: 4px solid #74a81a;
 	border-radius: 10px;
@@ -111,9 +110,7 @@ footer{
 .bullet{
 	width: 30px;
 	height: 30px;
-	/*flex: 0;*/
-	/*display: inline-block;*/
-	background-image: url(gs.png);
+	background-image: url('./Assets/gs.png');
 	background-position: -716px -755px;
 }
 .duckBox{
@@ -127,7 +124,7 @@ footer{
 	width: 45px;
 	height: 45px;
 	margin: 10px 2px;
-	background-image: url('duck icon.png');
+	background-image: url('./Assets/duck icon.png');
 	background-size: cover;
 	border-radius: 50%;
 	float: right;
@@ -154,7 +151,7 @@ footer{
 	top: 205px;
 	left: 233px;
 	position: absolute;
-	background-image: url(gs.png);
+	background-image: url('./Assets/gs.png');
 	background-position: -450px -412px;
 	transform: scale(-1,1);
 }
@@ -164,16 +161,12 @@ footer{
 	height: 90px;
 
 	position: absolute;
-	display: none;
-	/*top:0px;
-	left: 0px;*/
-	background: url('GS resized.png');
-	background-position: -420px -490px;
-	/*transition: top 2s linear 0s,left 2s linear 0s;*/	
+	display: none;	
+	background: url('./Assets/GS resized.png');
+	background-position: -420px -7484px;
 }
 
 .isKilled{
-	/*animation: duckFall .4s infinite step-end .5s;*/
 	transition: left 1s ease-in .5s;
 }
 
@@ -182,7 +175,7 @@ footer{
 	height: 104px;
 	position: absolute;
 	top: 600px;
-	background-image: url('GS resized.png');
+	background-image: url('./Assets/GS resized.png');
 	background-position: -828px 0px;
 }
 
@@ -192,7 +185,7 @@ footer{
 	position: absolute;
 	top: 550px;
 	left: 0;
-	background-image: url('GS resized.png');
+	background-image: url('./Assets/GS resized.png');
 	background-position: 0px 0px;
 	transition: all 3s ease-in-out 0s;
 	animation: dogRun .5s 6 step-end 0s;
@@ -205,7 +198,7 @@ footer{
 	position: absolute;
 	top: 600px;
 	left: calc(50% - 75px);
-	background-image: url('GS resized.png');
+	background-image: url('./Assets/GS resized.png');
 	background-position: -450px -140px;
 	transition: all 1s cubic-bezier(0.26, 0.63, 0, 0.97) 0s;
 	animation: dogLaugh .5s 6 step-end 0s;

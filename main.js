@@ -1,41 +1,37 @@
 
 let shotSound = new Audio;
-shotSound.src = 'SFX/shot.wav';
+shotSound.src = 'Assets/SFX/shot.wav';
 
 let laughSound = new Audio;
-laughSound.src = 'SFX/laugh.wav';
+laughSound.src = 'Assets/SFX/laugh.wav';
 
 let barkSound = new Audio;
-barkSound.src = 'SFX/bark.wav';
+barkSound.src = 'Assets/SFX/bark.wav';
 
 let catchSound = new Audio;
-catchSound.src = 'SFX/catch.wav';
+catchSound.src = 'Assets/SFX/catch.wav';
 
 let introSound = new Audio;
-introSound.src = 'SFX/Intro.mp3';
+introSound.src = 'Assets/SFX/Intro.mp3';
 
 let fallSound = new Audio;
-fallSound.src = 'SFX/Falls.mp3';
+fallSound.src = 'Assets/SFX/Falls.mp3';
 
 let landSound = new Audio;
-landSound.src = 'SFX/Lands.mp3';
+landSound.src = 'Assets/SFX/Lands.mp3';
 
 let clearSound = new Audio;
-clearSound.src = 'SFX/Clear.mp3';
+clearSound.src = 'Assets/SFX/Clear.mp3';
 
 let flapSound = new Audio;
-flapSound.src = 'SFX/flap.wav';
-flapSound.loop = false;
+flapSound.src = 'Assets/SFX/flap.wav';
 
 let quackSound = new Audio;
-quackSound.src = 'SFX/krya.wav';
+quackSound.src = 'Assets/SFX/krya.wav';
 
 let music = new Audio;
-music.src = 'SFX/DuckTalesTheme.mp3';
-
+music.src = 'Assets/SFX/DuckTalesTheme.mp3';
 		
-// let flapSound = document.querySelector('flap');
-
 
 let score = 0;
 let topScore = 0;
